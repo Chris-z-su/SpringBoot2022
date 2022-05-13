@@ -9,15 +9,22 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shubao</groupId>
-    <artifactId>springboot_05_mybatis</artifactId>
+    <artifactId>springboot_07_druid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot_05_mybatis</name>
-    <description>springboot_05_mybatis</description>
+    <name>springboot_07_druid</name>
+    <description>springboot_07_druid</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <!-- 1.导入对应的starter依赖 -->
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>

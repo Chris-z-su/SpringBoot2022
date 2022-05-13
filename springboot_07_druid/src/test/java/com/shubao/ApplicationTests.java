@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Springboot05MybatisApplicationTests {
+public class ApplicationTests {
 
     @Autowired
     private BookDao bookDao;
@@ -17,3 +17,4 @@ class Springboot05MybatisApplicationTests {
     }
 
 }
+
