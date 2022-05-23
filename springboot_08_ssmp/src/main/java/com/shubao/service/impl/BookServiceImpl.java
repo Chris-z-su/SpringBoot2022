@@ -49,7 +49,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> findByPage(Integer page, Integer size) {
-
         return null;
     }
 
