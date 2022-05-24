@@ -1,0 +1,13 @@
+# 应用环境
+#spring:
+#  profiles:
+#    active: dev
+#    include: devMVC,devDB
+
+spring:
+  profiles:
+    active: dev
+  group:
+    "pro": proMVC,proDB # 后边文件的配置会覆盖前边的配置
+    "dev": devMVC,devDB
+    "test": testMVC,testDB
