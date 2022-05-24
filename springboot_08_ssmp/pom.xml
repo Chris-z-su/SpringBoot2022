@@ -47,7 +47,26 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- devtools -->
+        <!--
+             1.添加springboot热部署依赖devtools
+             2.打开自动编译，Settings -> Build, Execution, Deployment -> Compiler, 勾选 Build Project automatically
+             3.部署
+             ① idea: Build -> Build Project   (Ctrl + F9)
+             ② 旧版idea自动部署: Ctrl + Shift + Alt + / , 打开registry，找到compiler.automake.allow.when.app.running, 勾选
+             ③ 新版(IDEA2021版)idea自动部署：Settings -> Advanced Settings,
+                找到 allow auto-make to start even if developed application is currently running,  勾选
+             ②和③ idea失去焦点5秒后，会自动部署
+             参考：https://www.cnblogs.com/fanqisoft/p/15200894.html
+
+             默认不触发热部署的目录：
+                 /META-INF/maven
+                 /META-INF/resources
+                 /resources
+                 /static
+                 /templates
+                 /public
+
+         -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

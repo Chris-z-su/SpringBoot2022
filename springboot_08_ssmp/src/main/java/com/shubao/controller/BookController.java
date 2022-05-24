@@ -41,27 +41,14 @@ public class BookController {
     @GetMapping("/{id}")
     public ResultVO getById(@PathVariable("id") Integer id){
         Book book = bookService.getById(id);
+        System.out.println("test hot deploy...");
+        System.out.println("test hot deploy...");
+        System.out.println("test hot deploy...");
         if (book == null){
             return ResultVOUtil.error(404, "查询失败");
         }
         return ResultVOUtil.success("查询成功", book);
     }
-
-    // /**
-    //  * 分页查询
-    //  * @param currentPage
-    //  * @param pageSize
-    //  * @return
-    //  */
-    // @GetMapping("/{currentPage}/{pageSize}")
-    // public ResultVO getPage(@PathVariable int currentPage, @PathVariable int pageSize){
-    //     IPage<Book> books = bookService.findByPage(currentPage, pageSize);
-    //     // 如果当前页码值大于总页码值，那么重新执行查询操作，设置当前页码值为总页码值
-    //     if (currentPage > books.getPages()){
-    //         books = bookService.findByPage((int) books.getPages(), pageSize);
-    //     }
-    //     return ResultVOUtil.success(books);
-    // }
 
     /**
      * 分页查询

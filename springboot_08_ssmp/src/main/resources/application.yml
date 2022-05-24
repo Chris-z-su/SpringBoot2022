@@ -8,13 +8,18 @@ spring:
       url: jdbc:mysql://localhost:3306/wollo?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
       username: root
       password: 1106135
+
   # 缓存开关
 #  thymeleaf:
 #    cache: true
+
   # 热部署生效
-#  devtools:
-#    restart:
-#      enabled: true
+  devtools:
+    restart:
+      # 开启热部署
+      enabled: true
+      # 设置不参与热部署的文件和目录
+      exclude: static/**, public/**, config/application.yml # 排除静态资源, 静态资源热部署需要刷新页面
 
 # mybatis-plus配置
 mybatis-plus:
@@ -24,5 +29,3 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 日志实现
-
-# 热部署
